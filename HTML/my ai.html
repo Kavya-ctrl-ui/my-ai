@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI</title>
+    <!-- Google Fonts & FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <button class="new-chat-btn">
+                    <i class="fa-solid fa-plus"><span>New Chat</span></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-history">
+                <div class="history-category">Today</div>
+                <div class="history-item active">Explain HTML basics</div>
+                <div class="history-item">CSS project ideas</div>
+                <div class="history-item">Operating System notes</div>
+                
+                <div class="history-category">Yesterday</div>
+                <div class="history-item">JavaScript questions</div>
+                <div class="history-item">Web development project</div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="menu-item"><i class="fa-solid fa-gear"></i> Settings</div>
+                <div class="menu-item"><i class="fa-solid fa-circle-question"></i> Help</div>
+                <div class="user-profile">
+                    <div class="user-avatar">S</div>
+                    <div class="user-info">
+                        <span class="user-name">Student</span>
+                        <span class="user-plan">Free Plan</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Section -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <span class="header-title">My AI <i class="fa-solid fa-chevron-down"></i></span>
+            </header>
+
+            <div class="chat-body" id="chatBody">
+                <!-- Initial Welcome Screen -->
+                <div class="welcome-container" id="welcomeContainer">
+                    <div class="ai-logo-large">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <h1>How can I help you?</h1>
+                    <p>Ask me anything. I can help you learn, write, code and explore ideas.</p>
+                </div>
+
+                <!-- Chat messages will append here dynamically via JS -->
+                <div class="chat-messages" id="chatMessages"></div>
+            </div>
+
+            <!-- Input Footer Area -->
+            <div class="chat-footer">
+                <div class="input-box-wrapper">
+                    <input type="text" id="userInput" placeholder="Message My AI...">
+                    <div class="input-actions">
+                        <button class="action-btn"><i class="fa-solid fa-microphone"></i></button>
+                        <button class="send-btn" id="sendBtn"><i class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                </div>
+                <p class="footer-note">My AI can make mistakes. Check important info.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
